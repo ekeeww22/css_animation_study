@@ -24,13 +24,14 @@
         }
         #v_btn {
             position:absolute; left:0; bottom:50px; width:100%;
-            display:flex; justify-content: center;
+            display:flex; justify-content: center; 
         }
         #v_btn a {
-            width:100px; margin:0 10px; 
-            display:flex; align-items:flex-end;
+            width:100px; margin:0 10px; transition:transform 1s; transform-origin:right bottom;
+            display:flex; align-items:flex-end; 
         }
-        #v_btn a img {width:100%;}
+        #v_btn a:hover {transform:rotate(20deg);}
+        #v_btn a img {width:100%; }
     </style>
     <script>
         window.onload=function(){

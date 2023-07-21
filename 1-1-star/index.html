@@ -19,8 +19,13 @@
         #v_btn {
             position:absolute; left:0; bottom:20px; width:100%;
             display:flex; justify-content: center;
+            
+        }
+        #v_btn a:hover {
+            transform:translateY(-100px);
         }
         #v_btn a {
+            transition:transform 1s ease-out;
             width:50px; margin:0 10px; 
             display:flex; align-items:flex-end;
         }
