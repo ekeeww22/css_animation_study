@@ -11,14 +11,34 @@
         main #btn:hover + .target1 {background:pink;}
         main span {width:100px; height:100px; background:lightblue; padding:10px;}
         main .target1 {transition:background 1s 0.5s;}
-        main .target2 {animation:right500 1s linear 3 alternate-reverse;}
-        main .target3 {}
-        main .target4 {}
-        main .target5 {}
+        main .target2 {animation:right500 1.5s linear 3 alternate both;}
+        main .target3 {animation:left_top_right linear 1s infinite alternate;}
+        main .target4 {animation:right_top_yellow_pink_lime_coral linear 3s infinite;}
+        main .target5 {animation:opacity 1s infinite,rotate_scale 1s infinite alternate;}
         /* animation + @keyframes */
         @keyframes right500 {
             0% {transform:translateX(0);}
             100% {transform:translateX(500px);}
+        }
+        @keyframes left_top_right {
+            0% {transform:translate(0, 0);}
+            50% {transform:translate(250px, -200px);}
+            100% {transform:translate(500px, 0);}
+        }
+        @keyframes right_top_yellow_pink_lime_coral {
+            0% {transform:translate(0, 0);}
+            25% {transform:translate(250px, 0); background:yellow;}
+            50% {transform:translate(250px, -250px); background:pink;}
+            75% {transform:translate(0px, -250px); background:lime;}
+            100% {transform:translate(0px, 0px); background:coral;}
+        }
+        @keyframes rotate_scale {
+            0% {transform:rotate(0) scale(1);}
+            100% {transform:rotate(360deg) scale(2);}
+        }
+        @keyframes opacity {
+            0% {opacity:0; font-size:1rem;}
+            100% {opacity:1; font-size:3rem;}
         }
         /* @keyframes 작성위치 style 맨 아래 또는 외부스타일로 분리 */
         /* 1. 원하는 애니메이션 시작-끝 장면 정하기 */
